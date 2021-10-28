@@ -20,7 +20,7 @@ void criarFila(struct fila *f, int tamanho){
     f->ultimoItem = -1;
 }
 
-void inserir(struct fila *f, int v){
+void inserirItemFila(struct fila *f, int v){
     if(f->ultimoItem == f->capacidade - 1){
         f->ultimoItem = -1;
     }
@@ -30,7 +30,7 @@ void inserir(struct fila *f, int v){
     f->numItens++;
 }
 
-int remover(struct fila *f){
+int removerItemFila(struct fila *f){
     int removido = f->dados[f->primeiroItem++];
     if(f->primeiroItem == f->capacidade){
         f->primeiroItem = 0;
@@ -56,7 +56,5 @@ void mostrarFila(struct fila *f){
 	printf("\n\n");
 
 }
-
-
 
 #endif
